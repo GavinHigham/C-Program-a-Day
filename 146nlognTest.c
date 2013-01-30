@@ -3,7 +3,7 @@
 
 int main() {
 	unsigned long long int n = 1;
-	unsigned long long int upper = 100 * 356 * 24 * 3600 * pow(10, 6);
+	unsigned long long int upper = 356 * 24 * 3600 * pow(10, 6);
 
 	while(n * log(n) <= upper) {
 		printf("%llu\n", n);
