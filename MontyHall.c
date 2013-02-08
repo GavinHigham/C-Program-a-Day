@@ -6,7 +6,7 @@
 void door_init(char* doors[])
 {
 	struct timeval tv;                                                                 
-	time_t curtime;
+	//time_t curtime;
 	gettimeofday(&tv, NULL);
 	srand(tv.tv_usec);
 	doors[0] = doors[1] = doors[2] = (char*)"goat";
@@ -16,8 +16,9 @@ void door_init(char* doors[])
 
 int main()
 {
+	int i;
 	char* doors[3];
 	door_init(doors);
-	for (int i = 0; i < 3; i++) printf("%s\n", doors[i]);
+	for (i = 0; i < 3; i++) printf("%s\n", doors[i]);
 	return 0;
 }

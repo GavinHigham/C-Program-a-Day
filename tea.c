@@ -12,6 +12,7 @@
 // Tetley brand is the best. And make sure to warm the pot.
 
 int main(int argc, char* argv[]) {
+	if (argc < 2) printf("Usage: tea [# of cups]\n");
 	int people = atoi(argv[1]);
 	float litres;
 
