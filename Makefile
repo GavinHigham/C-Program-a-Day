@@ -1,4 +1,4 @@
-CC=gcc 
+CC=gcc
 CFLAGS=-Wall -Wextra
 
 SOURCES:=$(shell echo *.c)
@@ -10,4 +10,4 @@ all: $(TARGETS)
 
 
 clean:
-	rm -f -R $(OBJECTS) $(TARGETS) *.dSYM
+	rm -f -R $(OBJECTS) $(TARGETS)
