@@ -42,6 +42,6 @@ int main()
 {
 	int array[] = {13, 19, 9, 5, 12, 8, 7, 4, 21, 2, 6, 11};
 	//int array[] = {2, 8, 7, 1, 3, 5, 6, 4};
-	printf("i is: %i\n", partition(array, 0, sizeof(array)/sizeof(int)));
+	printf("Partition returns : %i\n", partition(array, 0, sizeof(array)/sizeof(int)));
 	return 0;
 }
