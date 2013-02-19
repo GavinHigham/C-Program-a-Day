@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//Testing the partition algorithm for quicksort.
+//Gavin Higham, Keenan Mau, Brandon Rossi
+
 void swap(int* a, int* b)
 {
 	printf("%i was swapped with %i.\n", *a, *b);
@@ -20,7 +23,7 @@ int partition(int a[], int p, int r)
 	printf("\n");
 
 	for (j = p; j < r; j++) {
-		if (a[j] <= x) {
+		if (a[j] < x) {
 			i++;
 			swap(&a[i], &a[j]);
 			printf("When j is %2i, array is: ", j);
@@ -29,7 +32,7 @@ int partition(int a[], int p, int r)
 		}
 	}
 	swap(&a[i+1], &a[r-1]);
-	printf("When j is %2i, array is: ", j);
+	printf("Final array is:         ");
 	for (z = 0; z < r; z++) printf("[%2i]", a[z]);
 	printf("\n");
 	return i+1;
@@ -37,8 +40,8 @@ int partition(int a[], int p, int r)
 
 int main()
 {
-	//int array[] = {13, 19, 9, 5, 12, 8, 7, 4, 21, 2, 6, 11};
-	int array[] = {2, 8, 7, 1, 3, 5, 6, 4};
+	int array[] = {13, 19, 9, 5, 12, 8, 7, 4, 21, 2, 6, 11};
+	//int array[] = {2, 8, 7, 1, 3, 5, 6, 4};
 	printf("i is: %i\n", partition(array, 0, sizeof(array)/sizeof(int)));
 	return 0;
 }
