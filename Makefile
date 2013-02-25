@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall -Wextra
+CFLAGS=-Wall -Wextra -g
 
 SOURCES:=$(shell echo *.c)
 OBJECTS:=$(patsubst %.c,%.o,${SOURCES})
@@ -10,4 +10,4 @@ all: $(TARGETS)
 
 
 clean:
-	rm -f -R $(OBJECTS) $(TARGETS)
+	rm -f -R $(OBJECTS) $(TARGETS) *.dSYM
