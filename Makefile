@@ -7,7 +7,5 @@ TARGETS:=$(patsubst %.c,%,${SOURCES})
 
 all: $(TARGETS)
 
-
-
 clean:
 	rm -f -R $(OBJECTS) $(TARGETS) *.dSYM
