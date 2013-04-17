@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Takes some number of dollars and pennies and gives the money amount.
+
 int main(int argc, char* argv[]) {
 	if (argc != 3) {
 		printf("Usage: money dollars pennies\n");

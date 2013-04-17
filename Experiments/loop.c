@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//I don't really remember what this is.
+//Probably just playing with sizeof()
+
 int main()
 {
 	//int x = 1;

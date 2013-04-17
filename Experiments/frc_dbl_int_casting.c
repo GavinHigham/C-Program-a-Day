@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Experiments with casting.
+
 #define INT_MIN ((int) 0x80000000)
 #define INT_MAX 0x7FFFFFFF
 

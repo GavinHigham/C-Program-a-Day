@@ -1,5 +1,9 @@
+//Takes a list of numbers of some specified base.
+//Prints them in another specified base.
+
 #include <stdio.h>
 
+//Returns the hex value of a character.
 int ctoint(char c)
 {
 	int tmp = 0;
@@ -9,14 +13,15 @@ int ctoint(char c)
 	return tmp;
 }
 
+//Takes a string representing a number of some base and converts it to an int.
 long long int str2int(char* str, int base)
 {
 	char c;
 	long long int sum = 0;
 	int i = 0;
-	int sgn = 1;
+	int neg = 0;
 	if (str[0] == '-') {
-		sgn = -1;
+		neg = 1;
 		i++;
 	} //Check for sign and apply it afterwards.
 	if ((str[i] == '0') && (str[i+1] == 'x')) i += 2; //Make sure to drop the "0x".
@@ -26,9 +31,11 @@ long long int str2int(char* str, int base)
 		sum += ctoint(c);
 		i++;
 	}
-	return sum*sgn;
+	if (neg) sum = ~sum + 1; //Makes it negative without a multiply.
+	return sum;
 }
 
+//Prints out the results.
 void baseprint(long long int val, int newbase) {
 	char* receipt;
 	char result[65] = {0}; //long long ints shouldn't take more than 64 places to express, even in base 2.

@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 //Testing the partition algorithm for quicksort.
+//This one uses randomized partitioning.
 //Gavin Higham, Keenan Mau, Brandon Rossi
 
 void swap(int* a, int* b)

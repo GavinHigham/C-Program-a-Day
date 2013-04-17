@@ -3,6 +3,8 @@
 #include <string.h>
 #include <sys/time.h>
 
+//This will *eventually* be an implementation of the monty hall problem.
+
 void door_init(char* doors[])
 {
 	struct timeval tv;                                                                 

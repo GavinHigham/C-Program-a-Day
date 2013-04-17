@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Mucking about with incrementing pointers.
+
 int main()
 {
 	char str[] = "abcdef";

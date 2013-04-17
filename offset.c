@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//A quick implementation of a ceasar cypher.
+
 int main(int argc, char *argv[])
 {
 	if (argc < 3) {
@@ -13,8 +15,8 @@ int main(int argc, char *argv[])
 	int i = 0;
 	while ((c = a[i]) != '\0') {
 		int tmp = a[i] + offset;
-		if (tmp > 126) tmp %= 94;
-		if (tmp < 33) tmp = 128 + (tmp) % 94;
+		tmp = (tmp - 'a')%('z' - 'a') + 'a';
+		if (tmp < 'a') tmp += 'a';
 		printf("%c", tmp);
 		i++;
 	}

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
+//This is a really dumb hard-coded factorial experiment.
+
 int main()
 {
 	int n = 1;

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
+//This was to roughly estimate the answer to a homework problem.
+
 int main() {
 	unsigned long long int n = 1;
 	unsigned long long int upper = 356 * 24 * 3600 * pow(10, 6);

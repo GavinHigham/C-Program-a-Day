@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+//Tells you if my brother, Kelsey, is awake.
+
 int main() {
 	char internet[20]; 
 	printf("Is the internet working?\n");

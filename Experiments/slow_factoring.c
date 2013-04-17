@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Finds the factors of numbers, kinda.
+
 int main(int argc, char *argv[])
 {
 	if (argc < 2) {

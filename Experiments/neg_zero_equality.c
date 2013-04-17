@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Testing the equality of positive and negative 0 for integers and doubles.
+
 int main()
 {
 	int zero = 0;

@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Experimenting with different initializations of strings.
+
 int main()
 {
 	char *str;
