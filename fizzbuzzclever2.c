@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//Does the fizzbuzz interview question with only two semicolons.
+//Does the fizzbuzz interview question with only one semicolon.
 //The idea for putting the printf statement in a while loop to eliminate a semicolon came from ssylvan on Reddit.
 
 int main()
