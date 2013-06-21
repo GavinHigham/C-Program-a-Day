@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 		for (j = 0; j < 2*rad; j++) {
 			int tmp = (i-rad)*(i-rad) + (j-rad)*(j-rad);
 			if (((rad*rad - border*border) <= tmp) && (tmp < rad*rad)) {
-				printf("\\\\");
+				printf(":(");
 			}
 			else if (tmp < (rad*rad - border*border)) {
 				printf("//");

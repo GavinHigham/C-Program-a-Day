@@ -14,7 +14,7 @@
 int main(int argc, char* argv[]) {
 	if (argc < 2) printf("Usage: tea [# of cups]\n");
 	int people = atoi(argv[1]);
-	float litres;
+	float litres = 0.0;
 
 	//For the most part you can stick to the lines on the kettle.
 	switch (people) {
