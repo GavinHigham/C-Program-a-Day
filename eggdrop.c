@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define FLOORS 999
+#define FLOORS 2000
 #define MAXUINT ~0
 #define ulli unsigned long long int
 
