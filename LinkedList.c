@@ -16,7 +16,7 @@ NODEP newnode()
 {
 	NODEP tempnode = malloc(sizeof(NODE));
 	tempnode->next = NULL;
-	tempnode->data = 0;
+	tempnode->data = NULL;
 	return tempnode;
 }
 
@@ -38,7 +38,7 @@ int main()
 
 	//Node pointer to the head of my new linked list.
 	NODEP tempnode = node1;
-	
+
 	//Iterate over the list.
 	while(tempnode != NULL) {
 		printf("%s", tempnode->data);
