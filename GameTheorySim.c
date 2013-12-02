@@ -15,7 +15,7 @@ int main()
 {
 	int i, j, k;
 	int playerMoves[TURNS] = {0};
-	int costs[TURNS][MOVES];
+	double costs[TURNS][MOVES];
 	double playerWeight[TURNS][MOVES];
 	//Zero out the 2D arrays.
 	for (i = 0; i < TURNS; i++)
@@ -27,7 +27,7 @@ int main()
 		double denominator = 0;
 		//For each possible move...
 		for (j = 0; j < MOVES; j++) {
-			int rowCostSum = 0;
+			double rowCostSum = 0;
 			for (k = 0; k < i; k++) //Sum up row costs so far.
 				rowCostSum += costs[k][j];
 			playerWeight[i][j] = 1 - 0.1*rowCostSum; //Compute numerators.
@@ -36,19 +36,19 @@ int main()
 		for (j = 0; j < MOVES; j++)
 			playerWeight[i][j] /= denominator; //Divide each term by denominator.
 		playerMoves[i] = indexOfBiggest(playerWeight[i], MOVES); //Player chooses biggest.
-		costs[i][playerMoves[i]] = 1; //Adversary hits player.
+		costs[i][playerMoves[i]] = playerWeight[i][playerMoves[i]]; //Adversary hits player.
 	}
 	//Printing.
-	int totalCost = 0;
+	double totalCost = 0;
 	for (i = 0; i < TURNS; i++) {
 		printf("Turn %i\n", i+1);
 		printf("Player Weights | Adversary Set Costs\n");
 		for (j = 0; j < MOVES; j++) {
-			printf("%14f | %14i\n", playerWeight[i][j], costs[i][j]);
+			printf("%14f | %14f\n", playerWeight[i][j], costs[i][j]);
 		}
-		printf("\nPlayer chose move %i, and incurred cost %i\n\n", playerMoves[i], costs[i][playerMoves[i]]);
+		printf("\nPlayer chose move %i, and incurred cost %f\n\n", playerMoves[i], costs[i][playerMoves[i]]);
 		totalCost += costs[i][playerMoves[i]];
 	}
-	printf("Total cost: %i\n", totalCost);
+	printf("Total cost: %f\n", totalCost);
 	return 0;
 }
