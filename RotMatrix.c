@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <stdarg.h>
-int DIMENSION = 10;
+#include <stdlib.h>
+int DIMENSION = 1000;
 
 void printMatrix(int *matrix, int n)
 {
@@ -27,11 +27,12 @@ void rotateMatrix(int *matrix, int d)
 
 int main()
 {
-	int testMat[DIMENSION][DIMENSION];
-	for (int i = 0; i < DIMENSION*DIMENSION; i++) testMat[0][i] = i;
+	int matMemory[DIMENSION*DIMENSION]; //Stack allocate for the heck of it.
+	int *testMat = (int *)matMemory;
+	for (int i = 0; i < DIMENSION*DIMENSION; i++) testMat[i] = i;
 
-	printMatrix((int *)testMat, DIMENSION);
-	rotateMatrix((int *)testMat, DIMENSION);
-	printMatrix((int *)testMat, DIMENSION);
+	printMatrix(testMat, DIMENSION);
+	rotateMatrix(testMat, DIMENSION);
+	printMatrix(testMat, DIMENSION);
 	return 0;
 }
