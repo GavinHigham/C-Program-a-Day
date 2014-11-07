@@ -1,4 +1,4 @@
-CC=cc
+CC=gcc
 CFLAGS=-Wall -Wextra -g
 
 SOURCES:=$(shell echo *.c)
